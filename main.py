@@ -13,6 +13,14 @@ LONG_BREAK_MIN = 20
 # ---------------------------- TIMER RESET ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
+window.minsize()
+window.config(padx=100, pady=50, bg=YELLOW)
+tomato = Canvas(width=204, height=224, bg=YELLOW, highlightthickness=0)
+tomato_pic = PhotoImage(file="tomato.png")
+tomato.create_image(103, 112, image=tomato_pic)
+tomato.create_text(103, 130, text="00:00", font=(FONT_NAME, 30, "bold"), fill='white')
+tomato.pack()
+window.mainloop()
 # ---------------------------- TIMER MECHANISM ------------------------------- #
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
