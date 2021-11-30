@@ -1,5 +1,6 @@
 from tkinter import *
 from winsound import *
+
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -70,7 +71,7 @@ def count_down(count):
     secs = str(count % 60).rjust(2, "0")
     tomato.itemconfig(timer_text, text=f"{mins}:{secs}")
     if count > 0 and is_on:
-        window.after(1, count_down, count-1)
+        window.after(1000, count_down, count-1)
     elif count == 0 and is_on:
         start_timer()
         zoomer()
